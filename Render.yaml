@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: my-postgres-db
+    env: docker
+    plan: free
+    autoDeploy: true
+    healthCheckPath: /
