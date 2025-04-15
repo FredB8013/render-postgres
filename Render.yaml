@@ -1,7 +1,11 @@
 services:
-  - type: web
+  - type: pserv
     name: my-postgres-db
     env: docker
     plan: free
     autoDeploy: true
-    healthCheckPath: /
+    ports:
+      - port: 5432
+    envVars:
+      - key: POSTGRES_PASSWORD
+        value: $Tic@n@350*
