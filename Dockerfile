@@ -1,7 +1,7 @@
 FROM postgres:latest
 
 # Installer netcat pour simuler un serveur HTTP
-RUN apt-get update && apt-get install -y netcat
+RUN apt-get update && apt-get install -y netcat-traditional
 
 # Exposer les ports
 EXPOSE 5432
