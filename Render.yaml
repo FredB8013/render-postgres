@@ -5,9 +5,10 @@ services:
     plan: free
     autoDeploy: true
     dockerfilePath: ./Dockerfile
+    private: true
     envVars:
       - key: POSTGRES_PASSWORD
-        value: $Tic@n@350*
+        value: "$Tic@n@350*"
       - key: POSTGRES_USER
         value: Fredb1380_db
       - key: POSTGRES_DB
