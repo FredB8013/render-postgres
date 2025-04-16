@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: my-postgres-db
+    name: postgres-n8n
     env: docker
     plan: free
     autoDeploy: true
