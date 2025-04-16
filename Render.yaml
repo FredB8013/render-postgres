@@ -26,15 +26,13 @@ services:
       - key: DB_TYPE
         value: postgresdb
       - key: DB_POSTGRESDB_HOST
-        value: postgres-n8n
+        value: postgres-n8n.onrender.com
       - key: DB_POSTGRESDB_DATABASE
         value: db_n8n_render_postgres
       - key: DB_POSTGRESDB_USER
         value: Fredb1380_db
       - key: DB_POSTGRESDB_PASSWORD
         value: "$Tic@n@350*"
-    dependsOn:
-      - name: postgres-n8n
 
 #services:
 #  - type: web
