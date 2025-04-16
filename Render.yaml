@@ -15,5 +15,43 @@ services:
     ports:
       - port: 5432
         protocol: tcp
-      - port: 80
-        protocol: http
+
+  - type: web
+    name: n8n-custom-node-fb13880
+    env: docker
+    plan: free
+    autoDeploy: true
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: DB_TYPE
+        value: postgresdb
+      - key: DB_POSTGRESDB_HOST
+        value: postgres-n8n
+      - key: DB_POSTGRESDB_DATABASE
+        value: db_n8n_render_postgres
+      - key: DB_POSTGRESDB_USER
+        value: Fredb1380_db
+      - key: DB_POSTGRESDB_PASSWORD
+        value: "$Tic@n@350*"
+    dependsOn:
+      - name: postgres-n8n
+
+#services:
+#  - type: web
+#    name: postgres-n8n
+#    env: docker
+##    plan: free
+##    autoDeploy: true
+#    dockerfilePath: ./Dockerfile
+ #   envVars:
+  #    - key: POSTGRES_PASSWORD
+   #     value: "$Tic@n@350*"
+   #   - key: POSTGRES_USER
+   #     value: Fredb1380_db
+   #   - key: POSTGRES_DB
+   #     value: db_n8n_render_postgres
+   # ports:
+   #   - port: 5432
+   #     protocol: tcp
+   #   - port: 80
+   #     protocol: http
